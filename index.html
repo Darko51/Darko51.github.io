@@ -14,8 +14,8 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            padding: 0;
             color: white; /* Texto en blanco */
-            position: relative;
         }
 
         header {
@@ -25,8 +25,6 @@
             background-size: cover; /* Ajusta la imagen para que cubra todo el header */
             background-position: center; /* Centra la imagen en el header */
             color: white;
-            position: absolute;
-            top: 0;
             height: 15vh; /* Ajusta a un tamaño relativo */
         }
 
@@ -37,8 +35,6 @@
             background-size: cover; /* Ajusta la imagen para que cubra todo el footer */
             background-position: center; /* Centra la imagen en el footer */
             color: white;
-            position: absolute;
-            bottom: 0;
             height: 10vh; /* Ajusta a un tamaño relativo */
         }
 
@@ -48,16 +44,17 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 90%; /* Ancho flexible */
-            max-width: 400px; /* Tamaño máximo para que no crezca demasiado en pantallas grandes */
+            max-width: 400px; /* Tamaño máximo en pantallas grandes */
             text-align: center;
             color: black; /* Texto en negro para contraste */
-            margin-top: 20vh; /* Ajustar el margen superior para no superponerse con el header */
-            z-index: 1; /* Asegura que el contenedor esté por encima del header y footer */
+            margin-top: 20vh; /* Ajustar el margen superior */
+            z-index: 1;
         }
 
         .form-container img {
             max-width: 100%; /* Asegura que las imágenes no superen el ancho del contenedor */
             height: auto; /* Mantén la proporción de las imágenes */
+            margin-bottom: 15px; /* Añade espacio entre la imagen y el formulario */
         }
 
         .form-container h2 {
@@ -104,19 +101,28 @@
         /* Media Queries para diferentes dispositivos */
         @media (max-width: 768px) {
             .form-container {
-                width: 80%; /* Ancho más grande en tablets */
-                margin-top: 25vh; /* Ajustar margen superior para tablets */
+                width: 85%; /* Ancho más grande en tablets */
+                margin-top: 15vh; /* Ajustar margen superior para tablets */
+            }
+
+            header, footer {
+                height: 12vh; /* Ajustar el tamaño del header y footer para tablets */
             }
         }
 
         @media (max-width: 480px) {
             .form-container {
-                width: 90%; /* Ancho más grande en móviles */
-                margin-top: 30vh; /* Ajustar margen superior para móviles */
+                width: 95%; /* Ancho más grande en móviles */
+                margin-top: 10vh; /* Ajustar margen superior para móviles */
             }
 
             header, footer {
-                height: 12vh; /* Ajustar el tamaño del header y footer para móviles */
+                height: 10vh; /* Ajustar el tamaño del header y footer para móviles */
+            }
+
+            .form-container img {
+                max-width: 100%; /* Asegura que las imágenes no superen el ancho del contenedor */
+                height: auto;
             }
         }
     </style>
