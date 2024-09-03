@@ -7,22 +7,23 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #8A2BE2;
+            background-color: #8A2BE2; /* Fondo violeta */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            color: white;
+            color: white; /* Texto en blanco */
             position: relative;
         }
 
         header {
             width: 100%;
             text-align: center;
-            background-image: url(bj/img/bj1.png);
-            background-size: cover;
+            background-image: url('bj/img/bj1.png'); /* Imagen de fondo para el header */
+            background-size: cover; /* Ajusta la imagen para que cubra todo el header */
+            background-position: center; /* Centra la imagen en el header */
             color: white;
             position: absolute;
             top: 0;
@@ -32,9 +33,9 @@
         footer {
             width: 100%;
             text-align: center;
-            background-image: url('ruta/a/tu/imagen2.jpg');
-            background-size: cover;
-            background-position: center;
+            background-image: url('ruta/a/tu/imagen2.jpg'); /* Imagen de fondo para el footer */
+            background-size: cover; /* Ajusta la imagen para que cubra todo el footer */
+            background-position: center; /* Centra la imagen en el footer */
             color: white;
             position: absolute;
             bottom: 0;
@@ -42,16 +43,21 @@
         }
 
         .form-container {
-            background-color: white;
+            background-color: white; /* Fondo blanco */
             padding: 5%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 90%;
+            width: 90%; /* Ancho flexible */
             max-width: 400px; /* Tamaño máximo para que no crezca demasiado en pantallas grandes */
             text-align: center;
-            color: black;
-            margin-top: 20vh;
-            z-index: 1;
+            color: black; /* Texto en negro para contraste */
+            margin-top: 20vh; /* Ajustar el margen superior para no superponerse con el header */
+            z-index: 1; /* Asegura que el contenedor esté por encima del header y footer */
+        }
+
+        .form-container img {
+            max-width: 100%; /* Asegura que las imágenes no superen el ancho del contenedor */
+            height: auto; /* Mantén la proporción de las imágenes */
         }
 
         .form-container h2 {
@@ -78,7 +84,7 @@
             padding: 8px;
             border: none;
             border-radius: 5px;
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.1); /* Fondo claro para los inputs */
         }
 
         .form-container button {
@@ -98,15 +104,15 @@
         /* Media Queries para diferentes dispositivos */
         @media (max-width: 768px) {
             .form-container {
-                width: 80%;
-                margin-top: 25vh; /* Ajusta el margen superior para pantallas más pequeñas */
+                width: 80%; /* Ancho más grande en tablets */
+                margin-top: 25vh; /* Ajustar margen superior para tablets */
             }
         }
 
         @media (max-width: 480px) {
             .form-container {
-                width: 90%;
-                margin-top: 30vh; /* Ajusta el margen superior para dispositivos móviles */
+                width: 90%; /* Ancho más grande en móviles */
+                margin-top: 30vh; /* Ajustar margen superior para móviles */
             }
 
             header, footer {
@@ -122,6 +128,7 @@
     <div class="form-container">
         <img src="bj2.png" alt="Form Image"> 
 
+        <!-- Cambia el atributo "action" a submit.php para que el formulario envíe los datos a tu archivo PHP -->
         <form action="submit.php" method="post">
             <ul>
                 <li>
