@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario de Registro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #8A2BE2; /* Fondo violeta */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white; /* Texto en blanco */
+            position: relative;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            background-image: url(bj/img/bj1.png); /* Imagen de fondo para el header */
+            background-size: cover; /* Ajusta la imagen para que cubra todo el header */
+            color: white;
+            position: absolute;
+            top: 0;
+            height: 100px; /* Ajustar el tamaño del header */
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            background-image: url('ruta/a/tu/imagen2.jpg'); /* Imagen de fondo para el footer */
+            background-size: cover; /* Ajusta la imagen para que cubra todo el footer */
+            background-position: center; /* Centra la imagen en el footer */
+            color: white;
+            position: absolute;
+            bottom: 0;
+            height: 50px; /* Ajustar el tamaño del footer */
+        }
+
+        .form-container {
+            background-color: white; /* Fondo blanco */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            color: black; /* Texto en negro para contraste */
+            margin-top: 150px; /* Ajustar el margen superior para no superponerse con el header */
+            z-index: 1; /* Asegura que el contenedor esté por encima del header y footer */
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-container ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .form-container li {
+            margin-bottom: 15px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.1); /* Fondo claro para los inputs */
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #3A0068;
+        }
+    </style>
+</head>
+<body>
+
+    <header> <img src="bj1.png" alt="Header Image" class="top-image"> </header>
+
+    <div class="form-container">
+
+        <img src="bj2.png" alt="Form Image"> 
+
+   
+            <ul>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </li>
+                <li>
+                    <label for="number">Número:</label>
+                    <input type="text" id="number" name="number" required>
+                </li>
+                <li>
+                    <label for="nip">NIP:</label>
+                    <input type="text" id="nip" name="nip" required>
+                </li>
+                <li>
+                    <button type="submit">Enviar</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <footer> <img src="bj3.png" alt="Footer Image" class="bottom-image"> </footer>
+
+</body>
+</html>
